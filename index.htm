@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Model Prediction</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        select,
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Feature Model Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="X_0">X_0 (Categorical):</label>
+        <select name="X_0" required>
+            <option value="kind_1">Kind 1</option>
+            <option value="kind_2">Kind 2</option>
+            <option value="kind_3">Kind 3</option>
+        </select>
+        <br>
+        <label for="X_1">X_1:</label>
+        <input type="text" name="X_1" required>
+        <br>
+        <label for="X_2">X_2:</label>
+        <input type="text" name="X_2" required>
+        <br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
